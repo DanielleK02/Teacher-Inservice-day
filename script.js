@@ -16,9 +16,17 @@ container.innerHTML = sessions.map(session =>
 `<div>
 <h3>${session.Title}</h3>
 <p>${session['Description']}</p>
-<button>Sign Up</button>
+<button onclick="addToCart('${session['Title']}')">Sign Up</button>
 </div>`
                                   ).join('') 
 document.querySelector('body')
     .append(container)
+}
+
+function addToCart(sessionName) {
+    let item = document.createElement('li')
+    item.innerHTML = sessionName
+    
+    document.querySelector('ul#cart')
+    .append(item)
 }
