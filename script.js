@@ -16,6 +16,7 @@ container.innerHTML = sessions.map(session =>
 `<div>
 <h3>${session.Title}</h3>
 <p>${session['Description']}</p>
+<button>Sign Up</button>
 </div>`
                                   ).join('') 
 document.querySelector('body')
